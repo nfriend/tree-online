@@ -1,5 +1,7 @@
 # Tree Online
 
+<a href="https://gitlab.com/nfriend/tree-online/pipelines" target="_blank"><img src="https://gitlab.com/nfriend/tree-online/badges/master/pipeline.svg" alt="GitLab build status"></a>
+
 An online [tree](http://mama.indstate.edu/users/ice/tree/)-like utility for generating ASCII folder structure diagrams. Written in [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/).
 
 ---
