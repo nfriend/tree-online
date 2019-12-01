@@ -16,11 +16,6 @@ test:
   stage: test lint build
   script:
     - yarn test
-  artifacts:
-    paths:
-      - test-report.xml
-    reports:
-      junit: test-report.xml
 
 tslint:
   stage: test lint build
