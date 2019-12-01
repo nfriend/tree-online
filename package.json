@@ -15,7 +15,13 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tslint": "tslint -c tslint.json src/**/*.{ts,tsx}",
+    "tslint:fix": "yarn tslint --fix",
+    "prettier": "prettier --check 'src/**/*.{ts,tsx}'",
+    "prettier:fix": "prettier --write 'src/**/*.{ts,tsx}'",
+    "lint": "yarn prettier; yarn tslint",
+    "lint:fix": "yarn prettier:fix; yarn tslint:fix"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "^1.19.1",
+    "tslint": "^5.20.1"
   }
 }

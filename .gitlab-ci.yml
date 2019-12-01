@@ -1,0 +1,52 @@
+image: node:latest
+
+stages:
+  - test lint build
+  - deploy
+
+before_script:
+  - yarn
+
+cache:
+  key: ${CI_COMMIT_REF_SLUG}
+  paths:
+    - node_modules/
+
+test:
+  stage: test lint build
+  script:
+    - yarn test
+  artifacts:
+    paths:
+      - test-report.xml
+    reports:
+      junit: test-report.xml
+
+tslint:
+  stage: test lint build
+  script:
+    - yarn tslint
+
+prettier:
+  stage: test lint build
+  script:
+    - yarn prettier
+
+build:
+  stage: test lint build
+  script:
+    - yarn build
+  artifacts:
+    paths:
+      - build/
+
+pages:
+  stage: deploy
+  script:
+    - rm -rf public
+    - cp -r build public
+  artifacts:
+    paths:
+      - public
+  only:
+    - master
