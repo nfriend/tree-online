@@ -1,9 +1,9 @@
 {
+  "extends": ["tslint:recommended", "tslint-react"],
   "defaultSeverity": "error",
-  "extends": ["tslint:recommended"],
   "jsRules": {},
   "rules": {
-    "quotemark": [true, "single", "avoid-escape"],
+    "quotemark": [true, "single", "avoid-escape", "jsx-double"],
     "no-console": false,
     "arrow-parens": [true, "ban-single-arg-parens"],
     "object-literal-sort-keys": false,
