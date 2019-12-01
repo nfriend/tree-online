@@ -4,6 +4,8 @@
 
 An online [tree](http://mama.indstate.edu/users/ice/tree/)-like utility for generating ASCII folder structure diagrams. Written in [TypeScript](https://www.typescriptlang.org/) and [React](https://reactjs.org/).
 
+<img alt="The Tree Online logo" src="public/tree-logo.png" width="200"/>
+
 ---
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
