@@ -18,7 +18,7 @@ const mockInput = [
   '  .prettierrc.json',
   '  .gitlab-ci.yml',
   '  README.md',
-  'empty-dir',
+  'empty dir',
 ].join('\n');
 
 describe('parse-input', () => {
@@ -129,7 +129,7 @@ describe('parse-input', () => {
     myApp.children.push(readmeMd);
 
     const emptyDir: FileStructure = {
-      name: 'empty-dir',
+      name: 'empty dir',
       children: [],
       indentCount: 0,
       parent: root,
@@ -157,7 +157,7 @@ describe('splitInput', () => {
       { name: '.prettierrc.json', children: [], indentCount: 2, parent: null },
       { name: '.gitlab-ci.yml', children: [], indentCount: 2, parent: null },
       { name: 'README.md', children: [], indentCount: 2, parent: null },
-      { name: 'empty-dir', children: [], indentCount: 0, parent: null },
+      { name: 'empty dir', children: [], indentCount: 0, parent: null },
     ];
 
     expect(actual).toEqual(expected);
