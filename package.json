@@ -15,7 +15,7 @@
     "@types/react-dom": "16.9.4",
     "bootstrap": "4.4.1",
     "bootswatch": "4.4.1",
-    "lodash.flattendeep": "^4.4.0",
+    "lodash.flattendeep": "4.4.0",
     "lodash.last": "3.0.0",
     "react": "16.12.0",
     "react-dom": "16.12.0"
