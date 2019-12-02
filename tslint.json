@@ -10,7 +10,8 @@
     "max-line-length": false,
     "member-access": false,
     "interface-name": [true, "never-prefix"],
-    "no-var-requires": false
+    "no-var-requires": false,
+    "object-literal-key-quotes": false
   },
   "rulesDirectory": []
 }
