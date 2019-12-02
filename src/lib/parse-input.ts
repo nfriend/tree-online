@@ -10,10 +10,11 @@ import { FileStructure } from './FileStructure';
  */
 const leadingWhitespaceAndBulletRegex = /^((\s*)(?:-\s)?)/;
 
-/**
- * Matches lines that only contain whitespace.
- */
+/** Matches lines that only contain whitespace */
 const onlyWhitespaceRegex = /^\s*$/;
+
+/** Used to split a block of text into individual lines */
+const newlineSplitterRegex = /[^\r\n]+/g;
 
 /**
  * Translates a block of user-created text into
@@ -53,7 +54,7 @@ export const parseInput = (input: string): FileStructure => {
  * @param input The plain-text input from the user
  */
 export const splitInput = (input: string): FileStructure[] => {
-  let lines = input.match(/[^\r\n]+/g) || [];
+  let lines = input.match(newlineSplitterRegex) || [];
 
   // filter out empty lines
   lines = lines.filter(l => !onlyWhitespaceRegex.test(l));
