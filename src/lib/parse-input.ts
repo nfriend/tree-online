@@ -25,7 +25,7 @@ export const parseInput = (input: string): FileStructure => {
   const structures = splitInput(input);
 
   const root: FileStructure = {
-    name: 'root',
+    name: '.',
     children: [],
     indentCount: -1,
     parent: null,

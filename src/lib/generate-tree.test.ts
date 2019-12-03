@@ -78,4 +78,60 @@ grandparent
 
     expect(actual).toEqual(expected);
   });
+
+  it('appends a trailing slash to directories if trailingDirSlash === true', () => {
+    const input = `
+
+grandparent
+  parent/
+    child
+  parent//
+    child
+      grandchild
+
+    `;
+
+    const actual = generateTree(parseInput(input), { trailingDirSlash: true });
+
+    const expected = `
+.
+└── grandparent/
+    ├── parent/
+    │   └── child
+    └── parent//
+        └── child/
+            └── grandchild
+
+        `.trim();
+
+    expect(actual).toEqual(expected);
+  });
+
+  it("prints each items' full path if fullPath === true", () => {
+    const input = `
+
+grandparent
+  parent/
+    child
+  parent//
+    child
+      grandchild
+
+    `;
+
+    const actual = generateTree(parseInput(input), { fullPath: true });
+
+    const expected = `
+.
+└── ./grandparent
+    ├── ./grandparent/parent/
+    │   └── ./grandparent/parent/child
+    └── ./grandparent/parent//
+        └── ./grandparent/parent//child
+            └── ./grandparent/parent//child/grandchild
+
+        `.trim();
+
+    expect(actual).toEqual(expected);
+  });
 });

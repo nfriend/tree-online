@@ -1323,6 +1323,13 @@
   resolved "https://registry.yarnpkg.com/@types/json-schema/-/json-schema-7.0.3.tgz#bdfd69d61e464dcc81b25159c270d75a73c1a636"
   integrity sha512-Il2DtDVRGDcqjDtE+rF8iqg1CArehSK84HZJCT7AMITlyXRBpuPhqGLDQMowraqqu1coEaimg4ZOqggt6L6L+A==
 
+"@types/lodash.defaultsdeep@4.6.6":
+  version "4.6.6"
+  resolved "https://registry.yarnpkg.com/@types/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.6.tgz#d2e87c07ec8d0361e4b79aa000815732b210be04"
+  integrity sha512-k3bXTg1/54Obm6uFEtSwvDm2vCyK9jSROv0V9X3gFFNPu7eKmvqqadPSXx0SkVVixSilR30BxhFlnIj8OavXOA==
+  dependencies:
+    "@types/lodash" "*"
+
 "@types/lodash.flattendeep@4.4.6":
   version "4.4.6"
   resolved "https://registry.yarnpkg.com/@types/lodash.flattendeep/-/lodash.flattendeep-4.4.6.tgz#2686d9161ae6c3d56d6745fa118308d88562ae53"
@@ -6246,6 +6253,11 @@ lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
   integrity sha1-DM8tiRZq8Ds2Y8eWU4t1rG4RTZ0=
+
+lodash.defaultsdeep@4.6.1:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/lodash.defaultsdeep/-/lodash.defaultsdeep-4.6.1.tgz#512e9bd721d272d94e3d3a63653fa17516741ca6"
+  integrity sha512-3j8wdDzYuWO3lM3Reg03MuQR957t287Rpcxp1njpEa8oDrikb+FwGdW3n+FELh/A6qib6yPit0j/pv9G/yeAqA==
 
 lodash.flattendeep@4.4.0:
   version "4.4.0"

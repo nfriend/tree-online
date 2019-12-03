@@ -3,9 +3,6 @@
  * actual strings used to render the tree
  */
 export interface LineStringSet {
-  /** The string to render at the root of the tree */
-  ROOT: string;
-
   /** The string to render immediately before non-last children */
   CHILD: string;
 
@@ -22,14 +19,12 @@ export interface LineStringSet {
 /** Contains all strings for tree rendering */
 export const LINE_STRINGS: { [charset: string]: LineStringSet } = {
   ascii: {
-    ROOT: '.',
     CHILD: '|-- ',
     LAST_CHILD: '`-- ',
     DIRECTORY: '|   ',
     EMPTY: '    ',
   },
   'utf-8': {
-    ROOT: '.',
     CHILD: '├── ',
     LAST_CHILD: '└── ',
     DIRECTORY: '│   ',

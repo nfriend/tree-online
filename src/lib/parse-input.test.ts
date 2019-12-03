@@ -7,7 +7,7 @@ describe('parse-input', () => {
     const actual = parseInput(mockInput);
 
     const root: FileStructure = {
-      name: 'root',
+      name: '.',
       children: [],
       indentCount: -1,
       parent: null,
