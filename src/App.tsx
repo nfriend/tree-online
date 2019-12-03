@@ -2,7 +2,7 @@ import moment from 'moment';
 import React from 'react';
 
 const App: React.FC = () => {
-  const buildMoment = moment(); // moment('%%%GITLAB_CI_TIMESTAMP%%%');
+  const buildMoment = moment('%%%GITLAB_CI_TIMESTAMP%%%');
   const formatString = 'Y/MM/DD \\a\\t HH:mm:ss ZZ';
 
   let deploymentStatus;
