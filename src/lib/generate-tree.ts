@@ -5,12 +5,32 @@ import last from 'lodash.last';
 import { FileStructure } from './FileStructure';
 import { LINE_STRINGS } from './line-strings';
 
+/**
+ * Represents all rendering options available
+ * when calling `generateTree`
+ */
 interface GenerateTreeOptions {
+  /**
+   * Which set of characters to use when
+   * rendering directory lines
+   */
   charset?: 'ascii' | 'utf-8';
+
+  /**
+   * Whether or not to append trailing slashes
+   * to directories. Items that already include a
+   * trailing slash will not have another appended.
+   */
   trailingDirSlash?: boolean;
+
+  /**
+   * Whether or not to print the full
+   * path of the item
+   */
   fullPath?: boolean;
 }
 
+/** The default options if no options are provided */
 const defaultOptions: GenerateTreeOptions = {
   charset: 'utf-8',
   trailingDirSlash: false,
