@@ -38,8 +38,7 @@ build:
 pages:
   stage: deploy
   script:
-    - rm -rf public
-    - cp -r build public
+    - ci/pages-preparation.sh
   artifacts:
     paths:
       - public
