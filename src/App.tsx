@@ -2,14 +2,28 @@ import moment from 'moment';
 import React from 'react';
 
 const App: React.FC = () => {
-  const buildMoment = moment('%%%GITLAB_CI_TIMESTAMP%%%');
+  const buildMoment = moment(); // moment('%%%GITLAB_CI_TIMESTAMP%%%');
   const formatString = 'Y/MM/DD \\a\\t HH:mm:ss ZZ';
 
-  const deploymentStatus = buildMoment.isValid()
-    ? `Last deployed on ${buildMoment.format(
-        formatString,
-      )} (${buildMoment.fromNow()})`
-    : `Running locally. The current date is ${moment().format(formatString)}`;
+  let deploymentStatus;
+
+  if (buildMoment.isValid()) {
+    const deployedTimestamp = buildMoment.format(formatString);
+    const deployedAgo = buildMoment.fromNow();
+    const commitSha = '%%%CI_COMMIT_SHORT_SHA%%%';
+    const commitLink = `%%%CI_PROJECT_URL%%%/commits/${commitSha}`;
+
+    deploymentStatus = (
+      <span>
+        Last deployed on {deployedTimestamp} ({deployedAgo}) for commit{' '}
+        <a href={commitLink}>{commitSha}</a>
+      </span>
+    );
+  } else {
+    deploymentStatus = `Running locally. The current date is ${moment().format(
+      formatString,
+    )}`;
+  }
 
   return (
     <div className="App p-4">
