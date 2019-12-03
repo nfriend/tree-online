@@ -11,7 +11,7 @@ const App: React.FC = () => {
     const deployedTimestamp = buildMoment.format(formatString);
     const deployedAgo = buildMoment.fromNow();
     const commitSha = '%%%CI_COMMIT_SHORT_SHA%%%';
-    const commitLink = `%%%CI_PROJECT_URL%%%/commits/${commitSha}`;
+    const commitLink = `%%%CI_PROJECT_URL%%%/commit/${commitSha}`;
 
     deploymentStatus = (
       <span>
