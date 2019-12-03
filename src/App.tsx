@@ -6,7 +6,9 @@ const App: React.FC = () => {
   const formatString = 'Y/MM/DD \\a\\t HH:mm:ss ZZ';
 
   const deploymentStatus = buildMoment.isValid()
-    ? `Last deployed on ${buildMoment.format(formatString)}`
+    ? `Last deployed on ${buildMoment.format(
+        formatString,
+      )} (${buildMoment.fromNow()})`
     : `Running locally. The current date is ${moment().format(formatString)}`;
 
   return (
