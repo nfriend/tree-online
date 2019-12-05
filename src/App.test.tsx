@@ -1,10 +1,27 @@
+import Enzyme, { shallow } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import { App } from './App';
 
-it('renders without crashing', () => {
-  console.warn = jest.fn();
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+Enzyme.configure({ adapter: new Adapter() });
+
+function setup() {
+  const props = {};
+
+  const enzymeWrapper = shallow(<App {...props} />);
+
+  return {
+    props,
+    enzymeWrapper,
+  };
+}
+
+describe('components', () => {
+  describe('App', () => {
+    it('should render a friendly greeting', () => {
+      const { enzymeWrapper } = setup();
+
+      expect(enzymeWrapper.find('h1').text()).toBe('Hello, world!');
+    });
+  });
 });

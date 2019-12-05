@@ -6,16 +6,16 @@ interface AppState {
   deploymentStatus: JSX.Element | string;
 }
 
-class App extends React.Component {
+export class App extends React.Component {
   state: AppState = {
     deploymentStatus: '',
   };
 
   componentDidMount() {
-    const buildMoment = moment('%%%GITLAB_CI_TIMESTAMP%%%');
     const formatString = 'Y/MM/DD \\a\\t HH:mm:ss ZZ';
 
-    if (buildMoment.isValid()) {
+    if (process.env.NODE_ENV === 'production') {
+      const buildMoment = moment('%%%GITLAB_CI_TIMESTAMP%%%');
       const deployedTimestamp = buildMoment.format(formatString);
       const deployedAgo = buildMoment.fromNow();
       const commitSha = '%%%CI_COMMIT_SHORT_SHA%%%';

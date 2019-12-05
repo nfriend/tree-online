@@ -11,7 +11,8 @@
     "member-access": false,
     "interface-name": [true, "never-prefix"],
     "no-var-requires": false,
-    "object-literal-key-quotes": false
+    "object-literal-key-quotes": false,
+    "jsx-wrap-multiline": false
   },
   "rulesDirectory": []
 }
