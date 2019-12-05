@@ -53,7 +53,7 @@
   "devDependencies": {
     "node-sass": "4.13.0",
     "prettier": "1.19.1",
-    "react-scripts": "3.2.0",
+    "react-scripts": "3.3.0",
     "tslint": "5.20.1",
     "tslint-react": "4.1.0",
     "typescript": "3.7.3"
