@@ -1,4 +1,4 @@
-import { TreeState, UPDATE_SOURCE, TreeActionTypes } from './types';
+import { TreeActionTypes, TreeState, UPDATE_SOURCE } from './types';
 
 const initialState: TreeState = {
   source: `
