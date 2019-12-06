@@ -4,6 +4,7 @@ import Editor from 'react-simple-code-editor';
 import { bindActionCreators, Dispatch } from 'redux';
 import { updateSource } from '../store/tree/actions';
 import { TreeState } from '../store/tree/types';
+import './Input.scss';
 
 interface InputProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
   source: string;
@@ -19,7 +20,7 @@ export class Input extends React.Component<InputProps> {
 
   render() {
     return (
-      <div className={`bg-dark p-2 rounded-sm ${this.props.className}`}>
+      <div className={`input p-2 rounded-sm ${this.props.className}`}>
         <Editor
           value={this.props.source}
           onValueChange={this.props.updateSource}

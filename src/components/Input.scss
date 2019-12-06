@@ -1,0 +1,9 @@
+.input {
+  background: #303030;
+}
+
+@media (prefers-color-scheme: light) {
+  .input {
+    background: #eaeaea;
+  }
+}
