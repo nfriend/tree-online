@@ -4,12 +4,14 @@
   "jsRules": {},
   "rules": {
     "quotemark": [true, "single", "avoid-escape", "jsx-double"],
-    "no-console": false,
     "arrow-parens": [true, "ban-single-arg-parens"],
+    "arrow-return-shorthand": [true, "multiline"],
+    "interface-name": [true, "never-prefix"],
+
+    "no-console": false,
     "object-literal-sort-keys": false,
     "max-line-length": false,
     "member-access": false,
-    "interface-name": [true, "never-prefix"],
     "no-var-requires": false,
     "object-literal-key-quotes": false,
     "jsx-wrap-multiline": false

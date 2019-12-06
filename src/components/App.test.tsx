@@ -18,10 +18,10 @@ function setup() {
 
 describe('components', () => {
   describe('App', () => {
-    it('should render a friendly greeting', () => {
+    it('should render the app title in an h1', () => {
       const { enzymeWrapper } = setup();
 
-      expect(enzymeWrapper.find('h1').text()).toBe('Hello, world!');
+      expect(enzymeWrapper.find('h1').text()).toBe('tree.nathanfriend.io');
     });
   });
 });

@@ -6,7 +6,7 @@ import { configureStore } from './store';
 
 import './index.scss';
 
-import App from './App';
+import App from './components/App';
 
 const store = configureStore();
 
