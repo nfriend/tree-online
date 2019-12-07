@@ -34,7 +34,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tslint": "tslint -c tslint.json src/**/*.{ts,tsx}",
+    "tslint": "tslint -c tslint.json -p .",
     "tslint:fix": "yarn tslint --fix",
     "prettier": "prettier --check 'src/**/*.{ts,tsx}'",
     "prettier:fix": "prettier --write 'src/**/*.{ts,tsx}'",

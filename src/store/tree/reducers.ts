@@ -1,6 +1,6 @@
-import { TreeActionTypes, TreeState, UPDATE_SOURCE } from './types';
 import { generateTree } from '../../lib/generate-tree';
 import { parseInput } from '../../lib/parse-input';
+import { TreeActionTypes, TreeState, UPDATE_SOURCE } from './types';
 
 const source = `
 
