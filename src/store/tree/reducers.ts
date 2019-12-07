@@ -1,7 +1,8 @@
 import { TreeActionTypes, TreeState, UPDATE_SOURCE } from './types';
+import { generateTree } from '../../lib/generate-tree';
+import { parseInput } from '../../lib/parse-input';
 
-const initialState: TreeState = {
-  source: `
+const source = `
 
 Use indentation
   to indicate
@@ -14,7 +15,13 @@ Use indentation
       - markdown
       - bullets!
 
-`.trim(),
+`.trim();
+
+const tree = generateTree(parseInput(source));
+
+const initialState: TreeState = {
+  source,
+  tree,
 };
 
 export function treeReducer(state = initialState, action: TreeActionTypes) {
@@ -22,6 +29,7 @@ export function treeReducer(state = initialState, action: TreeActionTypes) {
     case UPDATE_SOURCE:
       return {
         source: action.source,
+        tree: generateTree(parseInput(action.source)),
       };
     default:
       return state;

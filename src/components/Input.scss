@@ -1,9 +1,17 @@
 .input {
   background: #303030;
+
+  &:focus-within {
+    box-shadow: 0 0 0.3rem rgba(115, 255, 175, 0.34);
+  }
 }
 
 @media (prefers-color-scheme: light) {
   .input {
     background: #eaeaea;
+
+    &:focus-within {
+      box-shadow: 0 0 0.3rem rgba(78, 172, 118, 0.57);
+    }
   }
 }

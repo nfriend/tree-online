@@ -1,5 +1,6 @@
 export interface TreeState {
   source: string;
+  tree: string;
 }
 
 export const UPDATE_SOURCE = 'UPDATE_SOURCE';
