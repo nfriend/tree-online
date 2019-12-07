@@ -15,22 +15,22 @@ cache:
 test:
   stage: test lint build
   script:
-    - yarn test
+    - yarn run test
 
 tslint:
   stage: test lint build
   script:
-    - yarn tslint
+    - yarn run tslint
 
 prettier:
   stage: test lint build
   script:
-    - yarn prettier
+    - yarn run prettier
 
 build:
   stage: test lint build
   script:
-    - yarn build
+    - yarn run build
   artifacts:
     paths:
       - build/
