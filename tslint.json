@@ -14,7 +14,8 @@
     "member-access": false,
     "no-var-requires": false,
     "object-literal-key-quotes": false,
-    "jsx-wrap-multiline": false
+    "jsx-wrap-multiline": false,
+    "semicolon": false
   },
   "rulesDirectory": []
 }

@@ -25,7 +25,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
     setTimeout(() => {
       this.setState({ copyButtonText: COPY });
     }, 1200);
-  }
+  };
 
   render() {
     return (
