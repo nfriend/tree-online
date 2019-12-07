@@ -1,4 +1,4 @@
-import React, { RefObject, createRef } from 'react';
+import React, { createRef, RefObject } from 'react';
 import { connect } from 'react-redux';
 import Editor from 'react-simple-code-editor';
 import { bindActionCreators, Dispatch } from 'redux';

@@ -1,11 +1,11 @@
 import moment from 'moment';
 import React from 'react';
-import './App.scss';
-import Input from './Input';
-import Tree from './Tree';
-import Menu from './Menu';
 import { connect } from 'react-redux';
+import './App.scss';
 import { ReactComponent as GitLabLogo } from './gitlab-logo.svg';
+import Input from './Input';
+import Menu from './Menu';
+import Tree from './Tree';
 
 interface AppState {
   deploymentStatus: JSX.Element | string;

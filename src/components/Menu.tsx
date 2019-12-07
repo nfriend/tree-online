@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import CopyToClipboard from 'react-copy-to-clipboard';
+import { connect } from 'react-redux';
 import { TreeState } from '../store/tree/types';
 import './Menu.scss';
 
@@ -25,7 +25,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
     setTimeout(() => {
       this.setState({ copyButtonText: COPY });
     }, 1200);
-  };
+  }
 
   render() {
     return (
