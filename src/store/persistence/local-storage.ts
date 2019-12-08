@@ -21,6 +21,8 @@ export function getSavedStateFromLocalStorage():
       return undefined;
     }
 
+    delete savedState.version;
+
     return savedState;
   } catch (e) {
     return undefined;

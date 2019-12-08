@@ -4,6 +4,8 @@ import { Provider } from 'react-redux';
 import * as serviceWorker from './serviceWorker';
 import { configureStore } from './store';
 
+import './third-party/JSONCrush';
+
 import 'react-toggle/style.css';
 import './index.scss';
 
