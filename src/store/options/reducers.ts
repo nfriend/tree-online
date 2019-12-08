@@ -10,7 +10,7 @@ import {
 const defaultState: OptionsState = {
   fancy: true,
   fullPath: false,
-  trailingSlash: false,
+  trailingSlash: true,
 };
 
 const savedState = getSavedState();

@@ -2,17 +2,22 @@ import { getSavedState } from '../persistence/saved-state';
 import { SourceActionTypes, SourceState, UPDATE_SOURCE } from './types';
 
 const source = `
-
-Use indentation
-  to indicate
-    file
-    and
-    folder
-    nesting
-  - You can even
-    - use
-      - markdown
-      - bullets!
+Edit me to generate
+  a
+    nice
+      tree
+        diagram!
+        :)
+  Use indentation
+    to indicate
+      file
+      and
+      folder
+      nesting.
+    - You can even
+      - use
+        - markdown
+        - bullets!
 
 `.trim();
 
