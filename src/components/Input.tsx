@@ -2,8 +2,8 @@ import React, { createRef, RefObject } from 'react';
 import { connect } from 'react-redux';
 import Editor from 'react-simple-code-editor';
 import { bindActionCreators, Dispatch } from 'redux';
-import { updateSource } from '../store/tree/actions';
-import { TreeState } from '../store/tree/types';
+import { updateSource } from '../store/source/actions';
+import { SourceState } from '../store/source/types';
 import './Input.scss';
 
 interface InputProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
@@ -61,8 +61,8 @@ export class Input extends React.Component<InputProps> {
   }
 }
 
-const mapStateToProps = ({ tree }: { tree: TreeState }) => ({
-  source: tree.source,
+const mapStateToProps = ({ source }: { source: SourceState }) => ({
+  source: source.source,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>

@@ -2,4 +2,16 @@
   .copy-button {
     width: 8rem;
   }
+
+  .options-toggle.react-toggle--checked .react-toggle-track {
+    background-color: #2384c6;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .menu {
+    .options-toggle.react-toggle--checked .react-toggle-track {
+      background-color: #2384c6;
+    }
+  }
 }

@@ -1,6 +1,5 @@
-export interface TreeState {
+export interface SourceState {
   source: string;
-  tree: string;
 }
 
 export const UPDATE_SOURCE = 'UPDATE_SOURCE';
@@ -10,4 +9,4 @@ interface UpdateSourceAction {
   source: string;
 }
 
-export type TreeActionTypes = UpdateSourceAction;
+export type SourceActionTypes = UpdateSourceAction;

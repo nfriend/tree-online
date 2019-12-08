@@ -46,8 +46,13 @@ export class App extends React.Component<void, AppState> {
   render() {
     return (
       <div className="app p-3 d-flex w-100 h-100 position-absolute flex-column">
-        <div className="flex-grow-0 flex-shrink-0 d-flex align-items-end mb-2">
-          <h1 className="flex-even">tree.nathanfriend.io</h1>
+        <div className="flex-grow-0 flex-shrink-0 d-flex align-items-center mb-2">
+          <div className="flex-even d-flex align-items-center">
+            <h1 className="mr-4 mb-0">tree.nathanfriend.io</h1>
+            <a href="https://gitlab.com/nfriend/tree-online#tree-online">
+              What is this?
+            </a>
+          </div>
           <Menu className="flex-even pl-4" />
         </div>
         <div className="flex-grow-1 d-flex">

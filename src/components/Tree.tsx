@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { TreeState } from '../store/tree/types';
+import { AppState, getTree } from '../store';
 import './Tree.scss';
 
 interface TreeProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
@@ -17,8 +17,8 @@ export class Tree extends React.Component<TreeProps> {
   }
 }
 
-const mapStateToProps = ({ tree: state }: { tree: TreeState }) => ({
-  tree: state.tree,
+const mapStateToProps = (state: AppState) => ({
+  tree: getTree(state),
 });
 
 export default connect(mapStateToProps)(Tree);
