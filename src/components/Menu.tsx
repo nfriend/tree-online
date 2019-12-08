@@ -12,10 +12,14 @@ import {
 import './Menu.scss';
 
 const COPY = 'Copy';
+const SHARE = 'Share';
 const COPIED = 'Copied!';
+const URL_COPIED = 'URL copied!';
+const BUTTON_TEXT_TIMEOUT = 1200;
 
 interface MenuState {
   copyButtonText: string;
+  shareButtonText: string;
 }
 
 interface MenuProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
@@ -31,13 +35,21 @@ interface MenuProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
 export class Menu extends React.Component<MenuProps, MenuState> {
   state: MenuState = {
     copyButtonText: COPY,
+    shareButtonText: SHARE,
   };
 
   onCopy = () => {
     this.setState({ copyButtonText: COPIED });
     setTimeout(() => {
       this.setState({ copyButtonText: COPY });
-    }, 1200);
+    }, BUTTON_TEXT_TIMEOUT);
+  };
+
+  onShare = () => {
+    this.setState({ shareButtonText: URL_COPIED });
+    setTimeout(() => {
+      this.setState({ shareButtonText: SHARE });
+    }, BUTTON_TEXT_TIMEOUT);
   };
 
   onFancyChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,11 +67,23 @@ export class Menu extends React.Component<MenuProps, MenuState> {
   render() {
     return (
       <div className={`menu d-flex align-items-center ${this.props.className}`}>
-        <CopyToClipboard text={this.props.tree} onCopy={this.onCopy}>
-          <button className="btn btn-success copy-button mr-4">
-            <b>{this.state.copyButtonText}</b>
-          </button>
-        </CopyToClipboard>
+        <div
+          className="btn-group mr-4"
+          role="group"
+          aria-label="Copy and share buttons"
+        >
+          <CopyToClipboard text={this.props.tree} onCopy={this.onCopy}>
+            <button className="btn btn-success copy-button">
+              <b>{this.state.copyButtonText}</b>
+            </button>
+          </CopyToClipboard>
+
+          <CopyToClipboard text={window.location.href} onCopy={this.onShare}>
+            <button className="btn btn-secondary share-button">
+              {this.state.shareButtonText}
+            </button>
+          </CopyToClipboard>
+        </div>
 
         <label className="d-flex align-items-center mb-0 mr-4 ml-1">
           <Toggle
@@ -68,7 +92,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
             onChange={this.onFancyChanged}
             icons={false}
           />
-          <span>Fancy</span>
+          <span className="no-wrap">Fancy</span>
         </label>
 
         <label className="d-flex align-items-center mb-0 mr-4">
@@ -78,7 +102,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
             onChange={this.onFullPathChanged}
             icons={false}
           />
-          <span>Full path</span>
+          <span className="no-wrap">Full path</span>
         </label>
 
         <label className="d-flex align-items-center mb-0">
@@ -88,7 +112,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
             onChange={this.onTrailingSlashChanged}
             icons={false}
           />
-          <span>Trailing /</span>
+          <span className="no-wrap">Trailing /</span>
         </label>
       </div>
     );
