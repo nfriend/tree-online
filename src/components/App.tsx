@@ -51,7 +51,7 @@ export class App extends React.Component<void, AppState> {
             <h1 className="mr-4 mb-0">tree.nathanfriend.io</h1>
             <a
               className="my-2 my-sm-0"
-              href="https://gitlab.com/nfriend/tree-online#tree-online"
+              href="https://gitlab.com/nfriend/tree-online#what-is-this"
             >
               What is this?
             </a>
