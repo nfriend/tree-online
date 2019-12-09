@@ -2,7 +2,7 @@
 
 <a href="https://gitlab.com/nfriend/tree-online/pipelines" target="_blank"><img src="https://gitlab.com/nfriend/tree-online/badges/master/pipeline.svg" alt="GitLab build status"></a>
 
-<img alt="The Tree Online logo" src="public/tree-logo.png" width="200"/>
+<img alt="The tree.nathanfriend.io logo" src="public/tree-logo.png" width="200"/>
 
 ## What is this?
 
