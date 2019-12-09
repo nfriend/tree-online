@@ -35,7 +35,7 @@ my-project
 
 ### Why would I want this?
 
-It's common to need to explain and discuss a file system structure on text-based sites like [StackOverflow](https://stackoverflow.com/), [GitHub](https://github.com/), or [GitLab](https://gitlab.com). But generating a nice-looking diagram like the one above is painful by hand.
+It's common to explain or discuss a file system structure on text-based sites like [StackOverflow](https://stackoverflow.com/), [GitLab](https://gitlab.com), or [GitHub](https://github.com/). But generating a nice-looking diagram like the one above is painful by hand.
 
 ## About the project
 
