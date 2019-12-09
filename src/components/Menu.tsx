@@ -71,7 +71,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
         className={`menu align-items-center ${this.props.className} flex-column flex-sm-row`}
       >
         <div
-          className="btn-group mr-4 align-self-stretch align-self-md-center"
+          className="btn-group mr-0 mr-sm-4 align-self-stretch align-self-md-center"
           role="group"
           aria-label="Copy and share buttons"
         >

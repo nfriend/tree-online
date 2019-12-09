@@ -59,7 +59,7 @@ export class App extends React.Component<void, AppState> {
           <Menu className="flex-even pl-4 d-none d-lg-flex" />
         </div>
         <div className="flex-grow-1 d-flex flex-column flex-lg-row">
-          <div className="flex-even d-flex mr-2">
+          <div className="flex-even d-flex mr-0 mr-lg-2">
             <Input className="flex-grow-1" />
           </div>
           <div className="flex-even">
