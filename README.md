@@ -50,6 +50,7 @@ Some other technologies this project uses:
 - [Moment.js](https://momentjs.com/) and a few functions from [Lodash](https://lodash.com/)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) and [GitLab Pages](https://about.gitlab.com/product/pages/) for continuous integration and deployment
   - If you're interested in the mechanics, check out this project's [.gitlab-ci.yml](.gitlab-ci.yml)
+- [Jest](https://jestjs.io/), [TSLint](https://palantir.github.io/tslint/), and [Prettier](https://prettier.io/) for code quality
 - [Renovate Bot](https://renovate.whitesourcesoftware.com/) for automatically keeping dependencies up-to-date
 
 ### `tree` implementation
