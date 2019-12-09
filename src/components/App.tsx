@@ -45,44 +45,50 @@ export class App extends React.Component<void, AppState> {
 
   render() {
     return (
-      <div className="app p-3 d-flex w-100 h-100 position-absolute flex-column">
+      <div className="app px-3 pt-2 d-flex w-100 h-100 position-absolute flex-column">
         <div className="flex-grow-0 flex-shrink-0 d-flex align-items-center mb-2">
-          <div className="flex-even d-flex align-items-center">
+          <div className="flex-even d-flex align-items-center flex-column flex-sm-row">
             <h1 className="mr-4 mb-0">tree.nathanfriend.io</h1>
-            <a href="https://gitlab.com/nfriend/tree-online#tree-online">
+            <a
+              className="my-2 my-sm-0"
+              href="https://gitlab.com/nfriend/tree-online#tree-online"
+            >
               What is this?
             </a>
           </div>
-          <Menu className="flex-even pl-4" />
+          <Menu className="flex-even pl-4 d-none d-lg-flex" />
         </div>
-        <div className="flex-grow-1 d-flex">
+        <div className="flex-grow-1 d-flex flex-column flex-lg-row">
           <div className="flex-even d-flex mr-2">
             <Input className="flex-grow-1" />
           </div>
           <div className="flex-even">
             <Tree className="flex-grow-1" />
           </div>
+          <Menu className="d-flex d-lg-none pt-2 pb-5" />
         </div>
-        <div className="flex-grow-0 flex-shrink-0 d-flex align-items-start mt-2">
-          <p className="text-muted text-right mb-0 pr-4 mr-auto">
+        <div className="flex-grow-0 flex-shrink-0 d-flex align-items-center align-items-sm-start mt-2 flex-column flex-md-row">
+          <p className="text-muted text-center text-sm-left mb-2 mb-md-0 pr-4 mr-auto">
             {this.state.deploymentStatus}
           </p>
-          <a
-            className="pr-4 view-source-on-gitlab-link"
-            href="https://gitlab.com/nfriend/tree-online"
-          >
-            View the source on GitLab
-            <GitLabLogo />
-          </a>
-          <a
-            className="pipeline-status-link"
-            href="https://gitlab.com/nfriend/tree-online/pipelines"
-          >
-            <img
-              src="https://gitlab.com/nfriend/tree-online/badges/master/pipeline.svg"
-              alt="GitLab build status"
-            />
-          </a>
+          <div className="d-flex flex-column flex-sm-row align-items-center align-items-sm-start mb-2 mt-md-0">
+            <a
+              className="pr-4 view-source-on-gitlab-link no-wrap"
+              href="https://gitlab.com/nfriend/tree-online"
+            >
+              View the source on Gitlab
+              <GitLabLogo />
+            </a>
+            <a
+              className="pipeline-status-link mt-2 mt-sm-0 mb-4 mb-md-0"
+              href="https://gitlab.com/nfriend/tree-online/pipelines"
+            >
+              <img
+                src="https://gitlab.com/nfriend/tree-online/badges/master/pipeline.svg"
+                alt="GitLab build status"
+              />
+            </a>
+          </div>
         </div>
       </div>
     );

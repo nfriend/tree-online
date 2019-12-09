@@ -66,14 +66,17 @@ export class Menu extends React.Component<MenuProps, MenuState> {
 
   render() {
     return (
-      <div className={`menu d-flex align-items-center ${this.props.className}`}>
+      // 'd-flex' class is applied by parent to allow for responsive behavior
+      <div
+        className={`menu align-items-center ${this.props.className} flex-column flex-sm-row`}
+      >
         <div
-          className="btn-group mr-4"
+          className="btn-group mr-4 align-self-stretch align-self-md-center"
           role="group"
           aria-label="Copy and share buttons"
         >
           <CopyToClipboard text={this.props.tree} onCopy={this.onCopy}>
-            <button className="btn btn-success copy-button">
+            <button className="btn btn-success copy-button py-3 py-sm-0">
               <b>{this.state.copyButtonText}</b>
             </button>
           </CopyToClipboard>
@@ -85,35 +88,37 @@ export class Menu extends React.Component<MenuProps, MenuState> {
           </CopyToClipboard>
         </div>
 
-        <label className="d-flex align-items-center mb-0 mr-4 ml-1">
-          <Toggle
-            className="mr-1 options-toggle"
-            defaultChecked={this.props.fancy}
-            onChange={this.onFancyChanged}
-            icons={false}
-          />
-          <span className="no-wrap">Fancy</span>
-        </label>
+        <div className="d-flex align-items-center flex-wrap mt-4 mt-sm-0">
+          <label className="d-flex align-items-center my-1 mr-3">
+            <Toggle
+              className="mr-1 options-toggle"
+              defaultChecked={this.props.fancy}
+              onChange={this.onFancyChanged}
+              icons={false}
+            />
+            <span className="no-wrap">Fancy</span>
+          </label>
 
-        <label className="d-flex align-items-center mb-0 mr-4">
-          <Toggle
-            className="mr-1 options-toggle"
-            defaultChecked={this.props.fullPath}
-            onChange={this.onFullPathChanged}
-            icons={false}
-          />
-          <span className="no-wrap">Full path</span>
-        </label>
+          <label className="d-flex align-items-center my-1 mr-3">
+            <Toggle
+              className="mr-1 options-toggle"
+              defaultChecked={this.props.fullPath}
+              onChange={this.onFullPathChanged}
+              icons={false}
+            />
+            <span className="no-wrap">Full path</span>
+          </label>
 
-        <label className="d-flex align-items-center mb-0">
-          <Toggle
-            className="mr-1 options-toggle"
-            defaultChecked={this.props.trailingSlash}
-            onChange={this.onTrailingSlashChanged}
-            icons={false}
-          />
-          <span className="no-wrap">Trailing /</span>
-        </label>
+          <label className="d-flex align-items-center my-1">
+            <Toggle
+              className="mr-1 options-toggle"
+              defaultChecked={this.props.trailingSlash}
+              onChange={this.onTrailingSlashChanged}
+              icons={false}
+            />
+            <span className="no-wrap">Trailing /</span>
+          </label>
+        </div>
       </div>
     );
   }
