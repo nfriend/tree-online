@@ -49,7 +49,7 @@ Some other technologies this project uses:
 - [Bootstrap](https://getbootstrap.com/). In particular, its [responsive flex utilities](https://getbootstrap.com/docs/4.4/utilities/flex/)
 - [Moment.js](https://momentjs.com/) and a few functions from [Lodash](https://lodash.com/)
 - [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) and [GitLab Pages](https://about.gitlab.com/product/pages/) for continuous integration and deployment
-  - If you're interested in the mechanics, check out this project's [.gitlab-ci.yml](./gitlab-ci.yml)
+  - If you're interested in the mechanics, check out this project's [.gitlab-ci.yml](.gitlab-ci.yml)
 - [Renovate Bot](https://renovate.whitesourcesoftware.com/) for automatically keeping dependencies up-to-date
 
 ### `tree` implementation
@@ -85,4 +85,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### Deploying
 
-This project is deployed automatically using [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) to [GitLab Pages](https://about.gitlab.com/product/pages/), so simply `git push` on `master` to trigger a new deployment. For more info, see this project's [.gitlab-ci.yml](./gitlab-ci.yml).
+This project is deployed automatically using [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) to [GitLab Pages](https://about.gitlab.com/product/pages/), so simply `git push` on `master` to trigger a new deployment. For more info, see this project's [.gitlab-ci.yml](.gitlab-ci.yml).
