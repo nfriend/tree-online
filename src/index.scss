@@ -24,3 +24,15 @@ body {
 .no-wrap {
   white-space: nowrap;
 }
+
+.offline {
+  .hide-offline {
+    display: none;
+  }
+}
+
+.online {
+  .hide-online {
+    display: none;
+  }
+}
