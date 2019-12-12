@@ -21,7 +21,7 @@
     "@types/reselect": "2.2.0",
     "bootstrap": "4.4.1",
     "bootswatch": "4.4.1",
-    "core-js": "3.4.8",
+    "core-js": "3.5.0",
     "lodash.defaultsdeep": "4.6.1",
     "lodash.flattendeep": "4.4.0",
     "lodash.last": "3.0.0",
