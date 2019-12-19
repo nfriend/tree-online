@@ -67,7 +67,7 @@
     "@types/enzyme": "3.10.4",
     "@types/enzyme-adapter-react-16": "1.0.5",
     "enzyme": "3.10.0",
-    "enzyme-adapter-react-16": "1.15.1",
+    "enzyme-adapter-react-16": "1.15.2",
     "node-sass": "4.13.0",
     "prettier": "1.19.1",
     "react-scripts": "3.3.0",
