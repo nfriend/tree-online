@@ -31,7 +31,7 @@
     "react-copy-to-clipboard": "5.0.2",
     "react-dom": "16.12.0",
     "react-redux": "7.1.3",
-    "react-simple-code-editor": "0.10.0",
+    "react-simple-code-editor": "0.11.0",
     "react-toggle": "4.1.1",
     "redux": "4.0.5",
     "reselect": "4.0.0"
