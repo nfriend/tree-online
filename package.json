@@ -27,7 +27,7 @@
     "lodash.last": "3.0.0",
     "moment": "2.24.0",
     "react": "16.12.0",
-    "react-app-polyfill": "1.0.5",
+    "react-app-polyfill": "1.0.6",
     "react-copy-to-clipboard": "5.0.2",
     "react-dom": "16.12.0",
     "react-redux": "7.1.3",
