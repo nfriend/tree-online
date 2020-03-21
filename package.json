@@ -70,7 +70,7 @@
     "enzyme-adapter-react-16": "1.15.2",
     "node-sass": "4.13.1",
     "prettier": "1.19.1",
-    "react-scripts": "3.4.0",
+    "react-scripts": "3.4.1",
     "tslint": "6.1.0",
     "tslint-react": "4.1.0",
     "typescript": "3.8.3"
