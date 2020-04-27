@@ -71,7 +71,7 @@
     "node-sass": "4.14.0",
     "prettier": "1.19.1",
     "react-scripts": "3.4.1",
-    "tslint": "6.1.1",
+    "tslint": "6.1.2",
     "tslint-react": "4.1.0",
     "typescript": "3.8.3"
   }
