@@ -25,7 +25,7 @@
     "lodash.defaultsdeep": "4.6.1",
     "lodash.flattendeep": "4.4.0",
     "lodash.last": "3.0.0",
-    "moment": "2.24.0",
+    "moment": "2.25.2",
     "react": "16.13.1",
     "react-app-polyfill": "1.0.6",
     "react-copy-to-clipboard": "5.0.2",
