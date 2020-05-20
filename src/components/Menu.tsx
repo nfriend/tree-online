@@ -65,8 +65,8 @@ export class Menu extends React.Component<MenuProps, MenuState> {
   };
 
   render() {
+    // 'd-flex' class is applied by parent to allow for responsive behavior
     return (
-      // 'd-flex' class is applied by parent to allow for responsive behavior
       <div
         className={`menu align-items-center ${this.props.className} flex-column flex-sm-row`}
       >
