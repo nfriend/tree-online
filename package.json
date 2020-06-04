@@ -73,6 +73,6 @@
     "react-scripts": "3.4.1",
     "tslint": "6.1.2",
     "tslint-react": "4.1.0",
-    "typescript": "3.9.3"
+    "typescript": "3.9.5"
   }
 }
