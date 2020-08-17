@@ -3,6 +3,7 @@ image: node:latest
 stages:
   - test lint build
   - deploy
+  - post deploy
 
 before_script:
   - yarn
@@ -42,5 +43,11 @@ pages:
   artifacts:
     paths:
       - public
+  only:
+    - master
+
+live tests:
+  stage: post deploy
+  trigger: nfriend/website-3.0-tests
   only:
     - master
