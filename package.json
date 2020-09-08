@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@types/core-js": "2.5.3",
+    "@types/core-js": "2.5.4",
     "@types/jest": "26.0.13",
     "@types/lodash.defaultsdeep": "4.6.6",
     "@types/lodash.flattendeep": "4.4.6",
