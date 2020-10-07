@@ -42,7 +42,7 @@ export class Input extends React.Component<InputProps> {
    * Applies no syntax highlighting.
    * Required for TypeScript compilation.
    */
-  highlight = (code: string) => code;
+  highlight = (code: string) => <React.Fragment>{code}</React.Fragment>;
 
   render() {
     return (
