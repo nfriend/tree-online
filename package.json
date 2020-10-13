@@ -19,7 +19,7 @@
     "@types/react-redux": "7.1.7",
     "@types/react-toggle": "4.0.2",
     "@types/reselect": "2.2.0",
-    "bootstrap": "4.5.2",
+    "bootstrap": "4.5.3",
     "bootswatch": "4.5.2",
     "core-js": "3.6.5",
     "lodash.defaultsdeep": "4.6.1",
