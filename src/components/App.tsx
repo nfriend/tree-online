@@ -36,6 +36,7 @@ export class App extends React.Component<void, AppState> {
             <a
               className="my-2 my-sm-0 hide-offline"
               href="https://gitlab.com/nfriend/tree-online#what-is-this"
+              target="_blank"
             >
               What is this?
             </a>
