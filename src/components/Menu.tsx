@@ -8,6 +8,7 @@ import {
   updateFancy,
   updateFullPath,
   updateTrailingSlash,
+  updateRootDot,
 } from '../store/options/actions';
 import './Menu.scss';
 
@@ -27,9 +28,11 @@ interface MenuProps extends React.HtmlHTMLAttributes<HTMLDivElement> {
   fancy: boolean;
   fullPath: boolean;
   trailingSlash: boolean;
+  rootDot: boolean;
   updateFancy: (newValue: boolean) => void;
   updateFullPath: (newValue: boolean) => void;
   updateTrailingSlash: (newValue: boolean) => void;
+  updateRootDot: (newValue: boolean) => void;
 }
 
 export class Menu extends React.Component<MenuProps, MenuState> {
@@ -62,6 +65,10 @@ export class Menu extends React.Component<MenuProps, MenuState> {
 
   onTrailingSlashChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
     this.props.updateTrailingSlash(event.target.checked);
+  };
+
+  onRootDotChanged = (event: React.ChangeEvent<HTMLInputElement>) => {
+    this.props.updateRootDot(event.target.checked);
   };
 
   render() {
@@ -109,7 +116,7 @@ export class Menu extends React.Component<MenuProps, MenuState> {
             <span className="no-wrap">Full path</span>
           </label>
 
-          <label className="d-flex align-items-center my-1">
+          <label className="d-flex align-items-center my-1 mr-3">
             <Toggle
               className="mr-1 options-toggle"
               defaultChecked={this.props.trailingSlash}
@@ -117,6 +124,15 @@ export class Menu extends React.Component<MenuProps, MenuState> {
               icons={false}
             />
             <span className="no-wrap">Trailing /</span>
+          </label>
+          <label className="d-flex align-items-center my-1">
+            <Toggle
+              className="mr-1 options-toggle"
+              defaultChecked={this.props.rootDot}
+              onChange={this.onRootDotChanged}
+              icons={false}
+            />
+            <span className="no-wrap">Root .</span>
           </label>
         </div>
       </div>
@@ -129,11 +145,12 @@ const mapStateToProps = (state: AppState) => ({
   fancy: state.options.fancy,
   fullPath: state.options.fullPath,
   trailingSlash: state.options.trailingSlash,
+  rootDot: state.options.rootDot,
 });
 
 const mapDispatchToProps = (dispatch: Dispatch) =>
   bindActionCreators(
-    { updateFancy, updateFullPath, updateTrailingSlash },
+    { updateFancy, updateFullPath, updateTrailingSlash, updateRootDot },
     dispatch,
   );
 

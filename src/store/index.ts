@@ -28,6 +28,7 @@ export const getTree = createSelector(
       charset: options.fancy ? 'utf-8' : 'ascii',
       fullPath: options.fullPath,
       trailingDirSlash: options.trailingSlash,
+      rootDot: options.rootDot,
     }),
 );
 

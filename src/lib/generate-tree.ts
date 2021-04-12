@@ -28,6 +28,11 @@ interface GenerateTreeOptions {
    * path of the item
    */
   fullPath?: boolean;
+
+  /**
+   * Whether or not to render a dot as the root of the tree
+   */
+  rootDot?: boolean;
 }
 
 /** The default options if no options are provided */
@@ -35,6 +40,7 @@ const defaultOptions: GenerateTreeOptions = {
   charset: 'utf-8',
   trailingDirSlash: false,
   fullPath: false,
+  rootDot: true,
 };
 
 /**
@@ -51,7 +57,11 @@ export const generateTree = (
     structure.children.map(c => generateTree(c, options)) as RecursiveArray<
       string
     >,
-  ]).join('\n');
+  ])
+    // Remove null entries. Should only occur for the very first node
+    // when `options.rootDot === false`
+    .filter(line => line != null)
+    .join('\n');
 
 /**
  * Returns a line of ASCII that represents
@@ -62,12 +72,12 @@ export const generateTree = (
 const getAsciiLine = (
   structure: FileStructure,
   options: GenerateTreeOptions,
-): string => {
+): string | null => {
   const lines = LINE_STRINGS[options.charset as string];
 
   // Special case for the root element
   if (!structure.parent) {
-    return structure.name;
+    return options.rootDot ? structure.name : null;
   }
 
   const chunks = [
@@ -81,7 +91,9 @@ const getAsciiLine = (
     current = current.parent;
   }
 
-  return chunks.join('');
+  // Join all the chunks together to create the final line.
+  // If we're not rendering the root `.`, chop off the first 4 characters.
+  return chunks.join('').substring(options.rootDot ? 0 : lines.CHILD.length);
 };
 
 /**

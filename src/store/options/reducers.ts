@@ -4,6 +4,7 @@ import {
   OptionsState,
   UPDATE_FANCY,
   UPDATE_FULL_PATH,
+  UPDATE_ROOT_DOT,
   UPDATE_TRAILING_SLASH,
 } from './types';
 
@@ -11,6 +12,7 @@ const defaultState: OptionsState = {
   fancy: true,
   fullPath: false,
   trailingSlash: true,
+  rootDot: true,
 };
 
 const savedState = getSavedState();
@@ -36,6 +38,11 @@ export function optionsReducer(
       return {
         ...state,
         trailingSlash: action.newValue,
+      };
+    case UPDATE_ROOT_DOT:
+      return {
+        ...state,
+        rootDot: action.newValue,
       };
     default:
       return state;

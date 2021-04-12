@@ -134,4 +134,31 @@ grandparent
 
     expect(actual).toEqual(expected);
   });
+
+  it('does not render the root dot if rootDot === false', () => {
+    const input = `
+
+grandparent
+  parent
+    child
+  parent
+    child
+      grandchild
+
+    `;
+
+    const actual = generateTree(parseInput(input), { rootDot: false });
+
+    const expected = `
+grandparent
+├── parent
+│   └── child
+└── parent
+    └── child
+        └── grandchild
+
+        `.trim();
+
+    expect(actual).toEqual(expected);
+  });
 });
