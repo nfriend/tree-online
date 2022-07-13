@@ -4,6 +4,10 @@
   &:focus-within {
     box-shadow: 0 0 0.3rem rgba(115, 255, 175, 0.34);
   }
+
+  textarea {
+    outline: none;
+  }
 }
 
 @media (prefers-color-scheme: light) {
