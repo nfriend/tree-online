@@ -1,7 +1,7 @@
 # `tree`, but online
 
 🌲 Make fancy trees with Unicode box drawing characters \
-🔀 Forked from [nfriend/tree-online] (officially [gitlab:nfriend/tree-online])
+🔀 Forked from [gitlab:nfriend/tree-online]
 
 <div align="center">
 
@@ -79,6 +79,5 @@ Codespaces] and run `npm start` in your terminal. This will spin up a preview
 site where you can play around with the code and see what happens.
 
 <!-- prettier-ignore-start -->
-[nfriend/tree-online]: https://github.com/nfriend/tree-online#readme
 [gitlab:nfriend/tree-online]: https://gitlab.com/nfriend/tree-online#treenathanfriendio
 <!-- prettier-ignore-end -->
