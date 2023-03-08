@@ -7,7 +7,7 @@
 
 ![](https://i.imgur.com/KBoCEyo.png)
 
-<div>
+</div>
 
 🐙 Use on GitHub repos \
 🗺️ Use on websites with `sitemap.xml` \
