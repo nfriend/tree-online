@@ -1,78 +1,34 @@
 {
-  "name": "@nathanfriend/tree-online",
-  "version": "0.1.0",
-  "description": "An online tree-like utility for generating ASCII folder structure diagrams",
-  "repository": "git@gitlab.com:nfriend/tree-online.git",
-  "author": "Nathan Friend <nathan@gitlab.com>",
-  "license": "MIT",
+  "name": "@jcbhmr/tree",
+  "version": "1.0.0",
   "private": true,
-  "dependencies": {
-    "@types/core-js": "2.5.4",
-    "@types/jest": "26.0.15",
-    "@types/lodash.defaultsdeep": "4.6.6",
-    "@types/lodash.flattendeep": "4.4.6",
-    "@types/lodash.last": "3.0.6",
-    "@types/node": "12.19.7",
-    "@types/react": "16.14.2",
-    "@types/react-copy-to-clipboard": "4.3.0",
-    "@types/react-dom": "16.9.10",
-    "@types/react-redux": "7.1.7",
-    "@types/react-toggle": "4.0.2",
-    "@types/reselect": "2.2.0",
-    "bootstrap": "4.5.3",
-    "bootswatch": "4.5.3",
-    "core-js": "3.8.0",
-    "lodash.defaultsdeep": "4.6.1",
-    "lodash.flattendeep": "4.4.0",
-    "lodash.last": "3.0.0",
-    "moment": "2.29.1",
-    "react": "16.14.0",
-    "react-app-polyfill": "1.0.6",
-    "react-copy-to-clipboard": "5.0.2",
-    "react-dom": "16.14.0",
-    "react-redux": "7.2.0",
-    "react-simple-code-editor": "0.11.0",
-    "react-toggle": "4.1.1",
-    "redux": "4.0.5",
-    "reselect": "4.0.0"
-  },
+  "description": "🌲 Make fancy trees with Unicode box drawing characters",
+  "repository": "github:jcbhmr/tree",
+  "license": "MIT",
+  "author": "Jacob Hummer <jcbhmr@outlook.com>",
+  "contributors": [
+    "Nathan Friend <nathan@gitlab.com>"
+  ],
+  "type": "module",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "tslint": "tslint -c tslint.json -p .",
-    "tslint:fix": "yarn tslint --fix",
-    "prettier": "prettier --check 'src/**/*.{ts,tsx}'",
-    "prettier:fix": "prettier --write 'src/**/*.{ts,tsx}'",
-    "lint": "yarn prettier; yarn tslint",
-    "lint:fix": "yarn prettier:fix; yarn tslint:fix"
+    "prepack": "next build && next export",
+    "start": "next dev",
+    "pretest": "prettier -w --ignore-path .gitignore .",
+    "test": "tsc --noEmit"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "dependencies": {
+    "next": "^13.2.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5"
   },
   "devDependencies": {
-    "@types/enzyme": "3.10.8",
-    "@types/enzyme-adapter-react-16": "1.0.6",
-    "enzyme": "3.11.0",
-    "enzyme-adapter-react-16": "1.15.5",
-    "prettier": "1.19.1",
-    "react-scripts": "3.4.4",
-    "sass": "^1.53.0",
-    "tslint": "6.1.3",
-    "tslint-react": "4.1.0",
-    "typescript": "3.9.7"
+    "@types/node": "^18.14.6",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "prettier": "^2.8.4",
+    "prettier-plugin-jsdoc": "^0.4.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^4.9.5"
   }
 }
